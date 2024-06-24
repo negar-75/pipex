@@ -6,7 +6,7 @@
 /*   By: nnasiri <nnasiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 15:31:15 by nnasiri           #+#    #+#             */
-/*   Updated: 2024/06/24 17:10:46 by nnasiri          ###   ########.fr       */
+/*   Updated: 2024/06/24 17:40:52 by nnasiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,14 @@ void	exe_cmd(t_pipex *store, char **cmd_args)
 {
 	char **paths;
 	char *cmd_path;
-
+	
+	printf("exe_cmd");
 	paths = store->paths;
 	while (*paths)
 	{
+		printf("%s \n",*paths);
+		fflush(stdout);
+
 		cmd_path = create_full_cmd_path(*paths, cmd_args[0]);
 		if (!cmd_path)
 			system_error("ERROR IN ALLOCATION", store);
