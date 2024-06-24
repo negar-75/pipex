@@ -16,7 +16,7 @@ int	open_infile(char *infile)
 {
 	int	fd;
 
-	fd = open(infile, O_RDONLY);
+    fd = open(infile, O_RDONLY);
 	if (fd < 0)
 	{
 		perror("Error infile");

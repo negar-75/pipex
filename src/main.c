@@ -18,7 +18,7 @@ int	main(int argc, char **argv, char **env)
 	t_pipex	store;
 
 	if (argc != 5)
-		err_message("Wrong Argument");
+		random_err("Wrong Argument");
 	init_store(&store, argc, argv, env);
 	if (pipe(store.end) == -1)
 		system_error("PIPE ERROR", &store);

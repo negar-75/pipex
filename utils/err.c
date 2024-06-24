@@ -12,7 +12,7 @@
 
 #include "../pipex.h"
 
-void	err_message(char *msg)
+void	random_err(char *msg)
 {
 	ft_putendl_fd(msg, 2);
 	exit(EXIT_FAILURE);

@@ -19,6 +19,7 @@ void	init_store(t_pipex *store, int argc, char **argv, char **env)
 	store->env = env;
 	store->infile_fd = open_infile(argv[1]);
 	store->outfile_fd = open_outfile(argv[argc - 1], store);
+    store->paths = get_path(env);
 	store->end[0] = -1;
 	store->end[1] = -1;
 }
