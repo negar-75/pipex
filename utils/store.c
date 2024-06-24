@@ -6,7 +6,7 @@
 /*   By: nnasiri <nnasiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 15:54:00 by nnasiri           #+#    #+#             */
-/*   Updated: 2024/06/19 15:54:04 by nnasiri          ###   ########.fr       */
+/*   Updated: 2024/06/24 15:40:56 by nnasiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	init_store(t_pipex *store, int argc, char **argv, char **env)
     store->paths = get_path(env);
 	store->end[0] = -1;
 	store->end[1] = -1;
+	store->cmd1 = get_cmd(argv[2]);
+	store->cmd2 = get_cmd(argv[3]);
 }
 
 void	free_store(t_pipex *store)

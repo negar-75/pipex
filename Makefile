@@ -27,7 +27,8 @@ LIBSFUNCS = $(addprefix $(LIBSFUNCS_FOLDER), \
 	ft_putendl_fd.c \
 	ft_putstr_fd.c  \
 	ft_split.c   \
-	ft_strncmp.c )
+	ft_strncmp.c \
+	ft_strlen.c)
 
 ALL_SRCS = $(SRCS) $(UTILS) $(LIBSFUNCS)
 

@@ -6,7 +6,7 @@
 /*   By: nnasiri <nnasiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 15:54:32 by nnasiri           #+#    #+#             */
-/*   Updated: 2024/06/19 15:55:45 by nnasiri          ###   ########.fr       */
+/*   Updated: 2024/06/24 17:14:03 by nnasiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int	main(int argc, char **argv, char **env)
 	id = fork();
 	if (id < 0)
 		system_error("FORK ERROR", &store);
-    if(id == 0)
-        child_process(&store);
+	if (id == 0)
+		child_process(&store);
+	// parent_process(&store);
 	return (0);
 }
