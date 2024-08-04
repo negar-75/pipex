@@ -17,11 +17,14 @@ void	init_store(t_pipex *store, int argc, char **argv, char **env)
 	store->argc = argc;
 	store->argv = argv;
 	store->env = env;
-	store->infile_fd = open_infile(argv[1]);
+    store->end[0] = -1;
+	store->end[1] = -1;
+    store->paths = NULL;
+	store->cmd1 = NULL;
+	store->cmd2 = NULL;
+    store->infile_fd = open_infile(argv[1]);
 	store->outfile_fd = open_outfile(argv[argc - 1], store);
     store->paths = get_path(env);
-	store->end[0] = -1;
-	store->end[1] = -1;
 	store->cmd1 = get_cmd(argv[2]);
 	store->cmd2 = get_cmd(argv[3]);
 }
@@ -36,4 +39,10 @@ void	free_store(t_pipex *store)
 		close(store->end[0]);
 	if (store->end[1] >= 0)
 		close(store->end[1]);
+    if(store->paths)
+        free_str(store->paths);
+    if(store->cmd1)
+        free_str(store->cmd1);
+    if(store->cmd2)
+        free_str(store->cmd2);
 }

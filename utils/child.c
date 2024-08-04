@@ -20,5 +20,5 @@ void	child_process(t_pipex *store)
 		system_error("dup2 end[1] error", store);
 	close(store->end[0]);
 	close(store->end[1]);
-	exe_cmd(store, store->cmd1);
+    exe_cmd(store, store->cmd1);
 }

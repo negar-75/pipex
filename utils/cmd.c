@@ -25,13 +25,9 @@ void	exe_cmd(t_pipex *store, char **cmd_args)
 	char **paths;
 	char *cmd_path;
 	
-	printf("exe_cmd");
 	paths = store->paths;
 	while (*paths)
 	{
-		printf("%s \n",*paths);
-		fflush(stdout);
-
 		cmd_path = create_full_cmd_path(*paths, cmd_args[0]);
 		if (!cmd_path)
 			system_error("ERROR IN ALLOCATION", store);

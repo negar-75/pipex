@@ -26,9 +26,12 @@ int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char		**ft_split(char const *s, char c);
 size_t		ft_strlen(const char *s);
 
+
+void	    free_str(char **str);
 void		random_err(char *msg);
 void		system_error(char *msg, t_pipex *store);
 void		free_store(t_pipex *store);
+
 
 int			open_infile(char *infile);
 int			open_outfile(char *outfile, t_pipex *store);

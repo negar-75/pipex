@@ -17,6 +17,12 @@ int	main(int argc, char **argv, char **env)
 	pid_t	id;
 	t_pipex	store;
 
+	// char **test = env;
+	// while (*test) 
+	// {
+	// 	printf("%s\n", *test);
+	// 	test++;
+	// }
 	if (argc != 5)
 		random_err("Wrong Argument");
 	init_store(&store, argc, argv, env);
@@ -27,6 +33,7 @@ int	main(int argc, char **argv, char **env)
 		system_error("FORK ERROR", &store);
 	if (id == 0)
 		child_process(&store);
-	// parent_process(&store);
+	parent_process(&store);
+	free_store(&store);
 	return (0);
 }

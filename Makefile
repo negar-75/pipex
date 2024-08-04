@@ -21,7 +21,8 @@ UTILS = $(addprefix $(UTILS_FOLDER), \
 	parent.c \
 	path.c \
 	store.c \
-	cmd.c )
+	cmd.c \
+	free_func.c)
 LIBSFUNCS = $(addprefix $(LIBSFUNCS_FOLDER), \
 	ft_putchar_fd.c \
 	ft_putendl_fd.c \
