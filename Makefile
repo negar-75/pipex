@@ -18,7 +18,6 @@ UTILS = $(addprefix $(UTILS_FOLDER), \
 	err.c \
 	child.c \
 	files.c \
-	parent.c \
 	path.c \
 	store.c \
 	cmd.c \
