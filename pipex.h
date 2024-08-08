@@ -33,7 +33,7 @@ void		system_error(char *msg, t_pipex *store);
 void		free_store(t_pipex *store);
 
 
-int			open_infile(char *infile);
+int	open_infile(char *infile, t_pipex *store);
 int			open_outfile(char *outfile, t_pipex *store);
 void		init_store(t_pipex *store, int argc, char **argv, char **env);
 void		child_process(t_pipex *store);

@@ -1,5 +1,3 @@
-this this this is infile 
-I am checking that this my code work well
-see you next time this
-this
+this is me
+I am happy
 this

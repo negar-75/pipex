@@ -22,7 +22,7 @@ void	init_store(t_pipex *store, int argc, char **argv, char **env)
     store->paths = NULL;
 	store->cmd1 = NULL;
 	store->cmd2 = NULL;
-    store->infile_fd = open_infile(argv[1]);
+    store->infile_fd = open_infile(argv[1],store);
 	store->outfile_fd = open_outfile(argv[argc - 1], store);
     store->paths = get_path(env);
 	store->cmd1 = get_cmd(argv[2]);

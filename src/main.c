@@ -17,12 +17,6 @@ int	main(int argc, char **argv, char **env)
 	pid_t	id;
 	t_pipex	store;
 
-	// char **test = env;
-	// while (*test) 
-	// {
-	// 	printf("%s\n", *test);
-	// 	test++;
-	// }
 	if (argc != 5)
 		random_err("Wrong Argument");
 	init_store(&store, argc, argv, env);
